@@ -15,4 +15,5 @@
         <item>ContactUs</item>
 
     </string-array>
+    <string name="title_activity_customer_login">customer_login</string>
 </resources>
