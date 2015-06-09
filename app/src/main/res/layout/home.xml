@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="fill_parent"
-        android:padding="20dp"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:text="Welcome To TruckSuvidha"
         android:textSize="25sp" />
-</RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text=""
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

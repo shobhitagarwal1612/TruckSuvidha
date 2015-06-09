@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TruckSSuvidha</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello">hello world</string>
+    <string-array name="listItems">
+        <item>Home</item>
+        <item>LoadPost</item>
+        <item>TruckPost</item>
+        <item>Directory</item>
+        <item>Packages</item>
+        <item>FAQ</item>
+        <item>DistanceCalculator</item>
+        <item>ContactUs</item>
+
+    </string-array>
+</resources>
