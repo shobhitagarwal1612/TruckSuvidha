@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 import project.fourthpointer.in.truckssuvidha.R;
 
+
 public class NavDrawerAdapter extends BaseAdapter {
     private ArrayList<NavDrawerItem> navDrawerItems;
     private Context context;

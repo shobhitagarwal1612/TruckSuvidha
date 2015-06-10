@@ -8,6 +8,7 @@ import android.view.Menu;
 
 import project.fourthpointer.in.truckssuvidha.R;
 
+
 public class Splash extends Activity {
     private int DELAY_TIME = 1000;
 

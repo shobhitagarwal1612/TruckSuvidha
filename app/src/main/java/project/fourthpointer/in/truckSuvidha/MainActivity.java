@@ -1,4 +1,5 @@
 package project.fourthpointer.in.truckSuvidha;
+
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,7 +17,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import org.json.JSONException;
 
@@ -25,7 +25,9 @@ import java.util.ArrayList;
 
 import project.fourthpointer.in.truckssuvidha.R;
 
+
 public class MainActivity extends ActionBarActivity {
+    private final static String TAG_EVENTS = "event tag";
     private ActionBar mActionBar;
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
@@ -35,10 +37,10 @@ public class MainActivity extends ActionBarActivity {
     private FragmentTransaction ft;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private Resources mResources;
-    private final static String TAG_EVENTS = "event tag";
     private Fragment frag;
-    private String tag,previousTag, previousTitle;
+    private String tag, previousTag, previousTitle;
     private boolean isDrawerOpen = false;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +61,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Log.d("MA", "onItemSelected");
+                Log.d("MA", "onItemSelected pos" + position);
                 mDrawerLayout.closeDrawers();
                 try {
                     itemSelected(position);
@@ -114,9 +116,37 @@ public class MainActivity extends ActionBarActivity {
                 frag = new Home();
                 tag = "Home";
                 break;
-            default:
-                frag = null;
-                Toast.makeText(this, "Clicked On default", Toast.LENGTH_SHORT).show();
+            case 1:
+                Log.d("MA", "onItemSelected Loar");
+
+                frag = new LoadBoard();
+                tag = "LoadBoard";
+                break;
+            case 2:
+                Log.d("MA", "onItemSelected Loar");
+
+                frag = new TruckBoard();
+                tag = "TruckBoard";
+                break;
+            case 3:
+                frag = new Directory();
+                tag = "Directory";
+                break;
+            case 4:
+                frag = new Package();
+                tag = "Package";
+                break;
+            case 5:
+                frag = new FAQ();
+                tag = "DistanceCalculator";
+                break;
+            case 6:
+                frag = new DistanceCalculator();
+                tag = "DistanceCalculator";
+                break;
+            case 7:
+                frag = new ContactUs();
+                tag = "ContactUs";
                 break;
         }
         if (frag != null) {
@@ -145,9 +175,16 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     public void onBackPressed() {
         if (isDrawerOpen)
             mDrawerLayout.closeDrawers();
+        else {
+            if (fm.getBackStackEntryCount() == 1)
+                finish();
+            else
+                fm.popBackStack();
         }
-   }
+    }
+}

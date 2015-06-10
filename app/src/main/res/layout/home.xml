@@ -25,7 +25,7 @@
                     android:paddingTop="15dp"
                     android:text="Welcome to"
                     android:textColor="#333333"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -34,7 +34,7 @@
                     android:paddingLeft="5dp"
                     android:text="Truck"
                     android:textColor="#00468C"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="Suvidha"
                     android:textColor="#FD4404"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -51,7 +51,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@drawable/TS_banner" />
+                android:src="@drawable/banner" />
+
+            <Button
+                android:id="@+id/btnSingIn"
+                style="@style/DefaultButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/button_default_bg"
+                android:padding="10dp"
+                android:text="Sign In"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/DefaultButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/button_default_bg"
+                android:padding="10dp"
+                android:text="Register"
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
